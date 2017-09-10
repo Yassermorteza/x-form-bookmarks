@@ -1,0 +1,128 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+body {
+  background-color: #666;
+  header{
+    text-align: center;
+    h2{
+     color: #d3d3d3;
+     font-size: 3rem;
+     font-family: serif;
+     font-style: italic;
+     font-weight: inherit;
+     text-shadow: 2px 2px #0c1f29;
+    }
+    h4{
+      color: #dcdcdc;
+      font-size: 2rem;
+      font-family: cursive;
+      font-style: italic;
+      font-variant: small-caps;
+      text-shadow: 1px 1px #010331;
+    }
+  }
+}
+
+.container {
+  width: 45vw;
+  min-width: 310px;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 1%;
+  margin: 0 auto;
+  background-color: #aaa;
+  color: #34495e;
+  box-shadow: 2px 2px 8px 0.1px;
+  .greeting{
+    margin: 1%;
+    font-weight: bold;
+    font-family: initial;
+  }
+  > a{
+    font-family: cursive;
+    color: #708192;
+    cursor: pointer;
+    &:hover{
+      color: #245c94;
+    }
+  }
+  .skill{
+    height: 78%;
+    border: 1px solid;
+    border-radius: 4px;
+    background-color: #b1b4b7;
+    margin-top: 0.13em;
+    padding: 1% 0 0 1%;
+    font-size: 0.95rem;
+    font-family: cursive;
+    &__selector{
+    border-radius: 4px;
+    width: 63%;
+    background-color: #ffffe0;
+    box-shadow: 1px -1px 8px 0.1px;
+    }
+    &__btn{
+      border-radius: 5px;
+      box-shadow: 0px -2px 5px 0.1px;
+      color: #191970;
+      font-family: cursive;
+      font-size: 0.7rem;
+      margin-top: 4px;
+    }
+    &__show{
+      &--added{
+        border: 1px solid;
+        background-color: #fffff0;
+        padding: 4%;
+        margin: 0.85%;
+        display: flex;
+        justify-content: space-between;
+      }
+      &--removebtn{
+        border: 1px solid;
+        border-radius: 50%;
+      }
+    }
+  }
+  .lastSeen {
+  font-size: 0.8rem;
+  font-family: serif;
+  }
+}
+
+// index page style
+.namebox{
+  width: 30vw;
+  min-width: 310px;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 1%;
+  margin: 0 auto;
+  background-color: #aaa;
+  color: #34495e;
+  box-shadow: 2px 2px 8px 0.1px;
+  .namebox__form--name{
+    &__inputname{
+      border-radius: 4px;
+      width: 60%;
+      background-color: #ffffe0;
+      box-shadow: 1px -1px 8px 0.1px;
+    }
+    &__nextbtn{
+      border-radius: 5px;
+      box-shadow: 0px -2px 5px 0.1px;
+      color: #191970;
+      font-family: cursive;
+      font-size: 0.7rem;
+      margin-top: 4px;
+    }
+  }
+
+}
+
+.em-pencil{
+  font-size: 1rem;
+}

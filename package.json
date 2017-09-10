@@ -1,0 +1,38 @@
+{
+  "name": "x-form-bookmarks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:dev": "nodemon -w src/index.html -w src/index.js -w src/style.scss -es,scss,html -x \"npm run build\"",
+    "prebuild": "mkdirp docs && mkdirp dist &&  cp src/index.html docs/ && cp src/skill.html docs/ && babel src -d dist && babel --preset env src -d dist",
+    "build": "browserify dist/index1.js -o docs/bundle1.js && browserify dist/index.js -o docs/bundle.js && node-sass src/style.scss docs/style.css && js-beautify src/index.js -o src/index.js && js-beautify src/index1.js -o src/index1.js",
+    "postbuild": "postcss docs/style.css -o docs/style.css && uglifyjs dist/index.js -o docs/bundle.js && uglifyjs dist/index1.js -o docs/bundle1.js",
+    "test": "npm run build && jshint dist/index.js && jshint dist/index1.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yassermorteza/x-form-bookmarks.git"
+  },
+  "author": "Yasser",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Yassermorteza/x-form-bookmarks/issues"
+  },
+  "homepage": "https://github.com/Yassermorteza/x-form-bookmarks#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "browserify": "^14.4.0",
+    "cp": "^0.2.0",
+    "js-beautify": "latest",
+    "jshint": "latest",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.5.3",
+    "nodemon": "latest",
+    "uglify-js": "latest"
+  },
+  "dependencies": {
+    "cssnano": "^3.10.0"
+  }
+}
